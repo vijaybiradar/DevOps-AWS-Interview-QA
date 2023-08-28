@@ -17,7 +17,7 @@ https://github.com/bregman-arie/devops-exercises/tree/master/topics/ansible
 
 # Git Interview Questions and Answers
 
-# Explain the difference between rebasing and merge in Git?
+# 1.Explain the difference between rebasing and merge in Git?
 
 Feature	Merge	Rebase
 Combines branches	Yes	Yes
@@ -27,7 +27,7 @@ Good for	Integrating changes	Cleaning up history
 
  
  
-# Have you faced the situation where you resolve conflicts in Git? How?
+# 2.Have you faced the situation where you resolve conflicts in Git? How?
 
 To resolve a merge conflict in Git, you can:
 Open the conflicting file in a text editor.
@@ -35,50 +35,71 @@ Resolve the conflicts manually.
 Stage the changes with git add.
 Commit the changes with git commit
 
-# How to revert a commit that has already been pushed and made public?
+# 3.How to revert a commit that has already been pushed and made public?
+
 There are two processes through which you can revert a commit:
 1. Remove or fix the bad file in a new commit and push it to the remote repository. Then commit it to the remote repository using:
 git commit –m “commit message”
 2. Create a new commit to undo all the changes that were made in the bad commit. Use the following command:
 git revert <commit id>
 
-# Tell about the commands git reset — mixed and git merge — abort?.
+# 4.Tell about the commands git reset — mixed and git merge — abort?
+
 git reset — mixed is used to undo changes made in the working directory and staging area.
 git merge — abort helps stop the merge process and return back to the state before the merging began.
-5. How will you find a list of files that has been modified in a particular commit?
+
+# 5. How will you find a list of files that has been modified in a particular commit?
 The command to get a list of files that has been changed in a particular commit is:
 git diff-tree –r {commit hash}
 • -r flag allows the command to list individual files
 • commit hash lists all the files that were changed or added in the commit.
-6. How will you fix a broken commit? What command you will use?
+
+# 6.  How will you fix a broken commit? What command you will use?
+
 To fix a broken commit in Git, We use the “git commit — amend” command, which helps us combine the staged changes with the previous commits instead of creating a fresh new commit.
-7. Explain git stash drop?
+
+# 7. Explain git stash drop?
+
 Git ‘stash drop’ command is used to remove the stashed item. This command will remove the last added stash item by default, and it can also remove a selected item as well.
 Ex: If you want to delete item named stash@{manoj}; you can use the command:
-git stash drop stash@{manoj}.
-8. Explain about “git cherry-pick”?
+git stash drop stash@{vijay}.
+
+# 8. Explain about “git cherry-pick”?
+
 This command enables you to pick up commits from a branch within a repository and apply it to another branch. This command is useful to undo changes when any commit is accidentally made to the wrong branch. Then, you can switch to the correct branch and use this command to git cherry-pick the commit.
-9. Can you tell the difference between git pull and git fetch?
+
+# 9. Can you tell the difference between git pull and git fetch?
+
 Git pull command pulls new changes or commits from a particular branch from your central repository and updates your target branch in your local repository. (Git pull = git fetch + git merge)
 Git fetch is also used for the same purpose but it works in a slightly different way. When you perform a git fetch, it pulls all new commits from the desired branch and stores it in a new branch in your local repository. If you want to reflect these changes in your target branch, git fetch must be followed with a git merge.
-10. What is origin in Git?
+
+# 10. What is origin in Git?
+
 Origin refers to the remote repository that a project was originally cloned from and is used instead of the original repository’s URL.
-11. What is the difference between resetting and reverting?
+
+# 11. What is the difference between resetting and reverting?
+
 git reset changes the state of the branch to a previous one by removing all of the states after the desired commit,
 git revert does it through the creation of new reverting commits and keeping the original one intact.
-12. What is ‘staging area’ or ‘index’ in Git?
+
+# 12. What is ‘staging area’ or ‘index’ in Git?
 That before completing the commits, it can be formatted and reviewed in an intermediate area known as ‘Staging Area’ or ‘Index’. Every change is first verified in the staging area and then that change is committed to the repository.
  
-13. What work is restored when the deleted branch is recovered?
+# 13. What work is restored when the deleted branch is recovered?
+
 The files which were stashed and saved in the stash index list will be recovered back. Any untracked files will be lost. Also, it is a good idea to always stage and commit your work or stash them.
-14. What is Head in Git?
+# 14. What is Head in Git?
+
 Git maintains a variable for referencing, called HEAD to the latest commit in the recent checkout branch. So if we make a new commit in the repo then the pointer or HEAD is going to move or change its position to point to a new commit.
-15. What is the purpose of branching and its types?
+# 15. What is the purpose of branching and its types?
+
 It allows the user to switch between the branches to keep the current work in sync without disturbing master branches and other developer’s work as per their requirements.
 · Feature branching — A feature branch model keeps all of the changes for a particular feature inside of a branch. When the feature is fully tested and validated by automated tests, the branch is then merged into master.
 · Task branching — In this branch, each task is implemented on its own branch with the task key included in the branch name. It is easy to see which code implements which task, just look for the task key in the branch name.
 · Release branching — Once the develop branch has acquired enough features for a release, you can clone that branch to form a Release branch. Creating this branch starts the next release cycle, so no new features can be added after this point, only bug fixes, documentation generation, and other release-oriented tasks should go in this branch. Once it is ready to ship, the release gets merged into master and tagged with a version number.
-Basic Git Commands — Refresh your mind once again
+
+# 16. Basic Git Commands — Refresh your mind once again
+
 git init: creating a new repository.
 git clone: to copy or check out the working repository.
 git pull: fetch the code already in the repository.
@@ -99,8 +120,8 @@ git status: To know the comparison between the working directories and index.
 
 ----------------------------------------------------------------------------------------------------------------
 
-Docker Interview Questions and Answers
-1. What is the difference between CMD and ENTRYPOINT in a Dockerfile?
+# Docker Interview Questions and Answers
+# 1. What is the difference between CMD and ENTRYPOINT in a Dockerfile?
 
 
 Feature	CMD	ENTRYPOINT
@@ -110,7 +131,9 @@ Can be used to specify multiple commands	Yes	No
 
 Ans : CMD in Dockerfile Instruction is used to execute a command in Running container, There should be one CMD in a Dockerfile.
 ENTRYPOINT in Dockerfile Instruction is used you to configure a container that you can run as an executable.
-2. What if you have accidentally out of the Docker containers, will you loose the files?
+
+# 2. What if you have accidentally out of the Docker containers, will you loose the files?
+
 Ans: No, When a Docker Container is exited, no data loss occurs as all the data is written to the disk by the application for the sole purpose of preservation. This process is consistently repeated until and unless the container is unequivocally deleted. Moreover, the file system for the Docker container persists even after the Docker container is halted.
 Question: Are Docker containers stateless or stateful?
 
