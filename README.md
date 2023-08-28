@@ -20,7 +20,7 @@ https://github.com/bregman-arie/devops-exercises/tree/master/topics/ansible
 # 1.Explain the difference between rebasing and merge in Git?
 
 | Feature |	Merge |	Rebase |
-----------------------------
+| ------- | ----- | --------|
 | Combines branches |	Yes |	Yes |
 | Keeps original history |	Yes	| No |
 | Can cause merge conflicts |	Yes |	No |
