@@ -13,8 +13,11 @@ https://github.com/bregman-arie/devops-exercises/blob/master/topics/jenkins_pipe
 https://github.com/bregman-arie/devops-exercises/tree/master/topics/containers
 https://github.com/bregman-arie/devops-exercises/tree/master/topics/cicd
 https://github.com/bregman-arie/devops-exercises/tree/master/topics/ansible
-Git Interview Questions and Answers
-Explain the difference between rebasing and merge in Git?
+
+
+# Git Interview Questions and Answers
+
+# Explain the difference between rebasing and merge in Git?
 
 Feature	Merge	Rebase
 Combines branches	Yes	Yes
@@ -24,19 +27,22 @@ Good for	Integrating changes	Cleaning up history
 
  
  
-2. Have you faced the situation where you resolve conflicts in Git? How?
+# Have you faced the situation where you resolve conflicts in Git? How?
+
 To resolve a merge conflict in Git, you can:
 Open the conflicting file in a text editor.
 Resolve the conflicts manually.
 Stage the changes with git add.
 Commit the changes with git commit
-3. How to revert a commit that has already been pushed and made public?
+
+# How to revert a commit that has already been pushed and made public?
 There are two processes through which you can revert a commit:
 1. Remove or fix the bad file in a new commit and push it to the remote repository. Then commit it to the remote repository using:
 git commit –m “commit message”
 2. Create a new commit to undo all the changes that were made in the bad commit. Use the following command:
 git revert <commit id>
-4. Tell about the commands git reset — mixed and git merge — abort?.
+
+# Tell about the commands git reset — mixed and git merge — abort?.
 git reset — mixed is used to undo changes made in the working directory and staging area.
 git merge — abort helps stop the merge process and return back to the state before the merging began.
 5. How will you find a list of files that has been modified in a particular commit?
