@@ -1,18 +1,12 @@
 # DevOps-AWS-Interview-QA
 
 
-https://manoj777.medium.com/
+
 https://intellipaat.com/blog/interview-question/amazon-aws-interview-questions/
-https://github.com/vijaybiradar/Interview_Guide/blob/main/Cloud_DevOps_Interview_Questions.md
-https://github.com/omerbsezer/Fast-Kubernetes/tree/main
-https://github.com/vijaybiradar/kubernetes_interview_questions/blob/main/kubernetes_interview_questions.md
-https://github.com/bregman-arie/devops-exercises/blob/master/topics/kubernetes/README.md
-https://github.com/bregman-arie/devops-exercises/tree/master/topics/aws
-https://github.com/bregman-arie/devops-exercises/tree/master/topics/observability
-https://github.com/bregman-arie/devops-exercises/blob/master/topics/jenkins_pipelines.md
-https://github.com/bregman-arie/devops-exercises/tree/master/topics/containers
-https://github.com/bregman-arie/devops-exercises/tree/master/topics/cicd
-https://github.com/bregman-arie/devops-exercises/tree/master/topics/ansible
+
+https://www.edureka.co/blog/interview-questions/top-devops-interview-questions/
+
+
 
 
 # Git Interview Questions and Answers
