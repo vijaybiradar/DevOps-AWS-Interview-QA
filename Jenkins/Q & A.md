@@ -137,6 +137,7 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 
 
 # Q: Explain CI/CD flow
+```
 
 1. Version Control System (VCS) Integration:
 
@@ -224,5 +225,6 @@ This action makes the image available for deployment in various environments.
 
 21. Notification and Alerting:
 - Notifications and alerting mechanisms (e.g., Slack or email notifications) are implemented for pipeline status updates and critical issues to keep the team informed.
+```
 
 
