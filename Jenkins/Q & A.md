@@ -134,3 +134,59 @@ Q: What are some of the common plugins that you use in Jenkins ?
 
 A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so that interview feels you use jenkins on a day-to-day basis.
 
+
+
+Q: Explain CI/CD flow
+
+# Branch Creation and Development:
+
+A developer initiates a new branch in Bitbucket to commence work on a specific feature.
+They commit changes to this branch regularly and push it to the remote repository upon completion.
+# Jenkins Integration:
+
+Jenkins is configured with a Git webhook to actively monitor the Bitbucket repository for changes.
+# Webhook Notification:
+
+When the developer pushes changes to the Bitbucket repository, the Git webhook promptly notifies Jenkins.
+# Code Retrieval and Build:
+
+Jenkins employs the Git plugin to fetch the latest code from the repository.
+The code is then processed and built using build automation tools like Maven, NPM, or ANT plugins.
+# Code Analysis with SonarQube:
+
+Following the build phase, Jenkins utilizes the Sonar plugin to send the code to SonarQube for in-depth analysis.
+SonarQube meticulously examines the codebase, assessing it for quality, security, and maintainability concerns.
+The results of this analysis are presented through the SonarQube dashboard, enabling developers to identify and enhance code quality.
+# Artifact Management:
+
+Upon successful compilation and testing, Jenkins interacts with an Artifactory repository using the JFrog plugin.
+This repository serves as a central location for storing binary files, including packaged application artifacts and dependencies, simplifying versioning and retrieval.
+# Containerization with Docker:
+
+Jenkins utilizes the Docker plugin to create a container image of the application.
+The Dockerfile defines the application's runtime environment, dependencies, and configuration settings.
+# Image Distribution:
+
+The Docker image is subsequently pushed to a Docker registry. This can be a private Docker Trusted Registry (DTR) or a Nexus repository when using AWS Elastic Container Registry (ECR).
+This action ensures the availability of the Docker image for deployment across various environments.
+# Deployment through Kubernetes:
+
+Jenkins interacts with Kubernetes using the Kubernetes plugin, a robust container orchestration platform.
+Kubernetes takes charge of deployment, scaling, and container management across a cluster of nodes.
+# High Availability and Reliability:
+
+The Kubernetes cluster maintains high availability and reliability by evenly distributing containers across nodes.
+It also continuously monitors container health and automatically restarts any containers that encounter issues.
+# Continuous Deployment with ArgoCD:
+
+ArgoCD actively monitors the Git repository for changes.
+Upon detecting new code commits, it automates the deployment process to different environments, including Development (Dev), System Integration Testing (SIT), User Acceptance Testing (UAT), Performance Testing (Perf), Pre-production (Pre-prod), and Production (Prod).
+# Monitoring and Logging with Prometheus and Loki :
+
+The deployed application is closely monitored using Prometheus for metrics and Loki for log management.
+# User Access:
+
+With the entire process complete, the application is now deployed and accessible to users.
+Users can access the application via exposed services and Ingress endpoints expertly managed by Kubernetes.
+
+
