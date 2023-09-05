@@ -168,7 +168,7 @@ Jenkins uses Docker to create a container image of the application.
 A Dockerfile defines the application's runtime environment, dependencies, and configuration.
 **8. Docker Image Security Scanning:**
 
-Before proceeding, Docker images undergo security scanning using tools like Clair or Anchore to identify vulnerabilities.
+Before proceeding, Docker images undergo security scanning using tools like Twistlock  to identify vulnerabilities.
 **9. Docker Image Publishing:**
 
 The Docker image is then pushed to a Docker registry.
