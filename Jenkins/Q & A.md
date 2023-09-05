@@ -136,7 +136,7 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 
 
 
-Q: Explain CI/CD flow
+# Q: Explain CI/CD flow
 
 # Branch Creation and Development:
 
