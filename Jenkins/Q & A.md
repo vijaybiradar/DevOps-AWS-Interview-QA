@@ -139,51 +139,51 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 # Q: Explain CI/CD flow
 ```
 
-1. Version Control System (VCS) Integration:
+**1. Version Control System (VCS) Integration:**
 
 Developers use Git as the underlying VCS and host their repositories on Bitbucket.
 They create a new branch in Bitbucket for each feature or bug fix.
-2. Local Development Workflow:
+**2. Local Development Workflow:**
 
 Developers run unit tests and conduct code reviews locally before committing changes.
-3. Continuous Integration (CI):
+**3. Continuous Integration (CI):**
 
 Jenkins is configured with a Git webhook that listens for changes in the Bitbucket repository.
 When developers push changes to the repository, the webhook notifies Jenkins.
-4. Automated Build:
+**4. Automated Build:**
 
 Jenkins fetches the latest code from the repository using the Git plugin.
 Jenkins performs automated builds of the application using build tools like Maven, NPM, or ANT, based on the project's requirements.
-5. Automated Testing:
+**5. Automated Testing:**
 
 Automated testing, including unit tests, integration tests, and any other relevant tests, is executed as part of the CI pipeline.
 Code quality checks are performed using static analysis tools.
-6. Artifact Management:
+**6. Artifact Management:**
 
 Jenkins interacts with an Artifactory repository using the JFrog plugin.
 Binary files, including packaged artifacts and dependencies, are stored in the Artifactory repository for versioning and easy retrieval.
-7. Containerization:
+**7. Containerization:**
 
 Jenkins uses Docker to create a container image of the application.
 A Dockerfile defines the application's runtime environment, dependencies, and configuration.
-8. Docker Image Security Scanning:
+**8. Docker Image Security Scanning:**
 
 Before proceeding, Docker images undergo security scanning using tools like Clair or Anchore to identify vulnerabilities.
-9. Docker Image Publishing:
+**9. Docker Image Publishing:**
 
 The Docker image is then pushed to a Docker registry.
 This can be a private registry like DTR or a Nexus repository in the case of AWS ECR.
 This action makes the image available for deployment in various environments.
-10. Infrastructure as Code (IaC):
+**10. Infrastructure as Code (IaC):**
 - Infrastructure provisioning is managed as code using tools like Terraform or AWS CloudFormation.
 - Infrastructure changes are versioned alongside application code.
 
-11. Container Orchestration with Kubernetes:
+**11. Container Orchestration with Kubernetes:**
 - Jenkins interacts with Kubernetes using the Kubernetes plugin.
 - Kubernetes manages the deployment, scaling, and container management across a cluster of nodes.
 - Kubernetes ensures high availability and reliability by distributing containers across nodes and monitoring their health.
 
-12. Blue-Green Deployment:
+**12. Blue-Green Deployment:**
 - Set up two identical environments, often referred to as "Blue" and "Green."
 - Deploy the new version (Green) alongside the existing version (Blue).
 - Route a portion of traffic to the Green environment for testing and validation.
@@ -191,40 +191,40 @@ This action makes the image available for deployment in various environments.
 - If any issues are detected, easily switch back to the Blue environment.
 - Once the Green environment is stable and validated, it becomes the new production (Blue) environment.
 
-13. Kubernetes Ingress for External URL Access:
+**13. Kubernetes Ingress for External URL Access:**
 - Create Kubernetes Ingress resources to allow external access to your services.
 - Configure Ingress rules to route incoming traffic based on hostnames and paths to specific services and ports.
 - Use a cloud-based load balancer or an on-premises solution to route external traffic to the Kubernetes cluster.
 
-14. Continuous Deployment (CD) with ArgoCD:
+**14. Continuous Deployment (CD) with ArgoCD:**
 - ArgoCD actively monitors the Git repository for changes.
 - When changes are committed, ArgoCD automatically deploys them to lower environment environments (Dev, SIT, UAT, Perf, Pre-prod).
 - Necessary approvals and tests are carried out in lower environments.
 
-15. Production Deployment with ArgoCD:
+**15. Production Deployment with ArgoCD:**
 - After successful testing in lower environments, ArgoCD deploys the new changes to the production environment with all necessary approvals and checks.
 
-16. Monitoring and Observability:
+**16. Monitoring and Observability:**
 - The deployed application is monitored using Prometheus for metrics collection.
 - Grafana is used for visualization and alerting.
 - Loki or a centralized logging solution like ELK is employed for log management.
 
-17. User Accessibility:
+**17. User Accessibility:**
 - The application is now deployed and accessible to users.
 - Users can access the application via exposed services and Ingress endpoints managed by Kubernetes.
 
-18. Documentation and Knowledge Sharing:
+**18. Documentation and Knowledge Sharing:**
 - Thorough documentation of the entire CI/CD pipeline and its processes is maintained and updated.
 - Knowledge sharing among team members ensures everyone understands and can effectively use the pipeline.
 
-19. Disaster Recovery Planning:
+**19. Disaster Recovery Planning:**
 - The pipeline includes disaster recovery planning, such as data backups and automated rollback procedures in case of deployment failures.
 
-20. Compliance and Security Checks:
+**20. Compliance and Security Checks:**
 - Depending on the application and industry, compliance checks (e.g., PCI DSS, HIPAA) and security scanning (e.g., OWASP ZAP) are integrated into the pipeline.
 
-21. Notification and Alerting:
+**21. Notification and Alerting:**
 - Notifications and alerting mechanisms (e.g., Slack or email notifications) are implemented for pipeline status updates and critical issues to keep the team informed.
-```
+
 
 
