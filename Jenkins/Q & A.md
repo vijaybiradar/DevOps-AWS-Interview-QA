@@ -142,6 +142,7 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 ![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/3f3f15a4-2641-4abd-8301-e33889582fc1)
 
 
+
 **1. Version Control System (VCS) Integration:**
 
 Developers use Git as the underlying VCS and host their repositories on Bitbucket.
