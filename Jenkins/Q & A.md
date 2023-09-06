@@ -144,56 +144,47 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 
 
 **1. Version Control System (VCS) Integration:**
-
-Developers use Git as the underlying VCS and host their repositories on Bitbucket.
-They create a new branch in Bitbucket for each feature or bug fix.
+ - Developers use Git as the underlying VCS and host their repositories on Bitbucket.
+ - They create a new branch in Bitbucket for each feature or bug fix.
 
 
 **2. Local Development Workflow:**
-
-Developers run unit tests and conduct code reviews locally before committing changes.
+ - Developers run unit tests and conduct code reviews locally before committing changes.
 
 
 **3. Continuous Integration (CI):**
-
-Jenkins is configured with a Git webhook that listens for changes in the Bitbucket repository.
-When developers push changes to the repository, the webhook notifies Jenkins.
+ - Jenkins is configured with a Git webhook that listens for changes in the Bitbucket repository.
+ - When developers push changes to the repository, the webhook notifies Jenkins.
 
 
 **4. Automated Build:**
-
-Jenkins fetches the latest code from the repository using the Git plugin.
-Jenkins performs automated builds of the application using build tools like Maven, NPM, or ANT, based on the project's requirements.
+- Jenkins fetches the latest code from the repository using the Git plugin.
+- Jenkins performs automated builds of the application using build tools like Maven, NPM, or ANT, based on the project's requirements.
 
 
 **5. Automated Testing:**
-
-Automated testing, including unit tests, integration tests, and any other relevant tests, is executed as part of the CI pipeline.
-Code quality checks are performed using static analysis tools.
+- Automated testing, including unit tests, integration tests, and any other relevant tests, is executed as part of the CI pipeline.
+- Code quality checks are performed using static analysis tools.
 
 
 **6. Artifact Management:**
-
-Jenkins interacts with an Artifactory repository using the JFrog plugin.
-Binary files, including packaged artifacts and dependencies, are stored in the Artifactory repository for versioning and easy retrieval.
+- Jenkins interacts with an Artifactory repository using the JFrog plugin.
+- Binary files, including packaged artifacts and dependencies, are stored in the Artifactory repository for versioning and easy retrieval.
 
 
 **7. Containerization:**
-
-Jenkins uses Docker to create a container image of the application.
-A Dockerfile defines the application's runtime environment, dependencies, and configuration.
+- Jenkins uses Docker to create a container image of the application.
+- A Dockerfile defines the application's runtime environment, dependencies, and configuration.
 
 
 **8. Docker Image Security Scanning:**
-
-Before proceeding, Docker images undergo security scanning using tools like Twistlock  to identify vulnerabilities.
+ - Before proceeding, Docker images undergo security scanning using tools like Twistlock  to identify vulnerabilities.
 
 
 **9. Docker Image Publishing:**
-
-The Docker image is then pushed to a Docker registry.
-This can be a private registry like DTR or a Nexus repository in the case of AWS ECR.
-This action makes the image available for deployment in various environments.
+- The Docker image is then pushed to a Docker registry.
+- This can be a private registry like DTR or a Nexus repository in the case of AWS ECR.
+- This action makes the image available for deployment in various environments.
 
 
 **10. Infrastructure as Code (IaC):**
