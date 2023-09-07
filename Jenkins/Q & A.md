@@ -218,26 +218,31 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 **15. Production Deployment with ArgoCD:**
 - After successful testing in lower environments, ArgoCD deploys the new changes to the production environment with all necessary approvals and checks.
 
-**16. Monitoring and Observability:**
+**16. Helm Chart Management:**
+- Helm is utilized for defining, managing, and versioning Kubernetes application deployments.
+- Specific Helm values.yaml files are used for each environment, such as SIT values.yaml, UAT values.yaml,Perf values.yaml and prod values.yaml, to customize configurations for different 
+  stages of deployment.
+
+**17. Monitoring and Observability:**
 - The deployed application is monitored using Prometheus for metrics collection.
 - Grafana is used for visualization and alerting.
 - Loki or a centralized logging solution like ELK is employed for log management.
 
-**17. User Accessibility:**
+**18. User Accessibility:**
 - The application is now deployed and accessible to users.
 - Users can access the application via exposed services and Ingress endpoints managed by Kubernetes.
 
-**18. Documentation and Knowledge Sharing:**
+**19. Documentation and Knowledge Sharing:**
 - Thorough documentation of the entire CI/CD pipeline and its processes is maintained and updated.
 - Knowledge sharing among team members ensures everyone understands and can effectively use the pipeline.
 
-**19. Disaster Recovery Planning:**
+**20. Disaster Recovery Planning:**
 - The pipeline includes disaster recovery planning, such as data backups and automated rollback procedures in case of deployment failures.
 
-**20. Compliance and Security Checks:**
+**21. Compliance and Security Checks:**
 - Depending on the application and industry, compliance checks (e.g., PCI DSS, HIPAA) and security scanning (e.g., OWASP ZAP) are integrated into the pipeline.
 
-**21. Notification and Alerting:**
+**22. Notification and Alerting:**
 - Notifications and alerting mechanisms (e.g., Slack or email notifications) are implemented for pipeline status updates and critical issues to keep the team informed.
 
 
