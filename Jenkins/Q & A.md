@@ -325,12 +325,13 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 
 **Step 1: Version Control with Git:**
 Set up a Git repository to manage your application code. Initialize the repository:
-``
+```
 git init
 ```
 Create and switch to a feature branch for development:
-
+```
 git checkout -b feature/my-feature
+```
 Make changes, add files, and commit your code:
 
 # Make changes, add files
