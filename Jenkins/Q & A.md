@@ -296,7 +296,7 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 - Kubernetes manifests are stored in a Git repository.
 
 **10. Deployment to Kubernetes:**
-- The application is deployed to a Kubernetes cluster.
+- The application is deployed to a Kubernetes cluster and accessible to users.
 - ArgoCD is used for GitOps-based deployments, ensuring consistency and traceability.
 - Outside users can access the application through exposed URLs via Ingress controllers.
 - Prometheus scrapes Kubernetes endpoints for monitoring.
