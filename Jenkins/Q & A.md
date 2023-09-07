@@ -253,6 +253,11 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 
 **One more version**
 
+# Q: Explain CI/CD flow
+
+![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/66e58971-db48-4435-a65d-8e0f26c4b3b8)
+![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/3f3f15a4-2641-4abd-8301-e33889582fc1)
+
 
 
 **1. Code Versioning and Triggering:**
