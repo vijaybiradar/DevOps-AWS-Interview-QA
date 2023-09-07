@@ -160,10 +160,14 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 **4. Automated Build:**
 - Jenkins fetches the latest code from the repository using the Git plugin.
 - Jenkins performs automated builds of the application using build tools like Maven, NPM, or ANT, based on the project's requirements.
+- If the build fails/successful, then the concerned team will be notified.
+- If the build is successful, then Jenkins deploys the build in the test server.
 
 
 **5. Automated Testing:**
 - Automated testing, including unit tests, integration tests, and any other relevant tests, is executed as part of the CI pipeline.
+- After testing, Jenkins generates feedback and then notifies the developers about the build and test results.
+- It will continue to check the source code repository for changes made in the source code and the whole process keeps on repeating.
 - Code quality checks are performed using static analysis tools.
 
 
