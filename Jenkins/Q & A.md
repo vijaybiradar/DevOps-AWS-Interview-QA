@@ -345,16 +345,54 @@ git checkout main
 ```
 git merge feature/my-feature
 
+**Step 2: Generate Maven Archetype (if needed):**
 
-**Step 2: Maven Project Setup (pom.xml):**
+Generate a Maven archetype for your project (if needed):
+```
+mvn archetype:generate -DgroupId=com.example -DartifactId=your-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+```
+This will create a new project directory with the following structure:
+
+my-application
+├── pom.xml
+└── src
+    └── main
+        └── java
+            └── com
+                └── example
+                    └── myapplication
+                        └── App.java
+
+Customize the generated project structure and files as necessary.
+
+** Maven Project Setup (pom.xml):**
+
 
 Configure your Maven project's pom.xml file. Include GAV (Group, Artifact, Version) information and other project details:
 ```
-<groupId>com.example</groupId>
-<artifactId>your-app</artifactId>
-<version>1.0.0</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>my-application</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</project>
+
 ```
 Specify project dependencies, plugins, profiles, and other settings according to your project requirements.
+```
+<dependencies>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>5.3.8</version>
+    </dependency>
+    <!-- Add more dependencies as needed -->
+</dependencies>
+```
+
 
 **Step 3: Code Analysis with SonarQube:**
 
@@ -379,13 +417,7 @@ Run SonarQube analysis in your CI/CD pipeline:
 mvn clean install sonar:sonar -Dsonar.projectKey=my-app -Dsonar.host.url=http://sonarqube-server:9000 -Dsonar.login=your-sonar-token
 ```
 
-**Step 4: Generate Maven Archetype (if needed):**
 
-Generate a Maven archetype for your project (if needed):
-```
-mvn archetype:generate -DgroupId=com.example -DartifactId=your-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-```
-Customize the generated project structure and files as necessary.
 
 **Step 5: Maven Build and Build Outputs:**
 Understand the Maven build lifecycle and phases (e.g., clean, validate, compile, test, package, deploy).
@@ -400,6 +432,18 @@ Capture build outputs (JAR file, GAV, test reports, etc.):
 
 # You can find the JAR file and other build outputs in the target directory
 Step 6: Create a Docker Image of the Application:
+
+After the build process completes successfully, you'll find your application's JAR file in the target directory within your project folder.
+
+For example, if your project is named my-application, you'll find the JAR file at my-application/target/my-application-1.0-SNAPSHOT.jar.
+
+ **Run Your Java Application**
+
+You can run your Java application by executing the JAR file. For example:
+
+```
+java -jar my-application/target/my-application-1.0-SNAPSHOT.jar
+```
 
 Create a Dockerfile for the application to package it into an image. For example, create a Dockerfile with the following content:
 Dockerfile
@@ -427,9 +471,9 @@ docker build -t your-app:1.0.0 .
 Step 7: Push the Docker Image to a Registry:
 
 Push the Docker image to a container registry like Docker Hub or a private registry:
-bash
-Copy code
+```
 docker push your-docker-registry/your-app:1.0.0
+```
 Step 8: Create Kubernetes Manifests for the Application:
 
 Create Kubernetes Deployment and Service manifests for the application. Define how the application should be deployed to the Kubernetes cluster.
