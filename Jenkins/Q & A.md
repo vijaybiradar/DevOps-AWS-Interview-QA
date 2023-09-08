@@ -593,6 +593,9 @@ Monitor both blue and green environments to ensure the new version is stable.
 # Q: complete CI/CD pipeline for a Node.js application without using jenkins ? or
 **What is the workflow for deploying an JAVA application to multiple environments (SIT, UAT, Perf, and Prod) without utilizing Jenkins, using a manual process? Can you describe how popular DevOps tools such as Git, Maven, Docker, Kubernetes, Artifactory, Helm, Prometheus/Grafana/Loki, Blue-Green Deployment works**
 
+![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/b186502f-e788-4b6f-b4bf-080839f3f153)
+
+
 complete steps for setting up a CI/CD pipeline for a Node.js application using npm, Docker, Kubernetes, Helm, and implementing a blue/green deployment strategy:
 
 Step 1: Version Control with Git
