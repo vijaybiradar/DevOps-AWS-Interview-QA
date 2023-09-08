@@ -450,7 +450,7 @@ mvn deploy
 ```
 
 
-**: Maven Build and Build Outputs:**
+**Maven Build and Build Outputs:**
 - Understand the Maven build lifecycle and phases (e.g., clean, validate, compile, test, package, deploy).
 
 **Build the application:**
