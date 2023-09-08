@@ -451,9 +451,9 @@ mvn deploy
 
 
 **: Maven Build and Build Outputs:**
-Understand the Maven build lifecycle and phases (e.g., clean, validate, compile, test, package, deploy).
+- Understand the Maven build lifecycle and phases (e.g., clean, validate, compile, test, package, deploy).
 
-Build the application:
+**Build the application:**
 
 ```
 mvn clean install
@@ -465,11 +465,10 @@ You can find the JAR file and other build outputs in the target directory
 
 After the build process completes successfully, you'll find your application's JAR file in the target directory within your project folder.
 
-For example, if your project is named my-application, you'll find the JAR file at my-application/target/my-application-1.0-SNAPSHOT.jar.
+For example, if your project is named my-application, you'll find the JAR file at ```my-application/target/my-application-1.0-SNAPSHOT.jar.```
 
  **Run Your Java Application**
-
-You can run your Java application by executing the JAR file. For example:
+  - You can run your Java application by executing the JAR file. For example:
 
 ```
 java -jar my-application/target/my-application-1.0-SNAPSHOT.jar
