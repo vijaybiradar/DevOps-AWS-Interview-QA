@@ -352,7 +352,7 @@ Generate a Maven archetype for your project (if needed):
 mvn archetype:generate -DgroupId=com.example -DartifactId=your-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
 This will create a new project directory with the following structure:
-
+```
 my-application
 ├── pom.xml
 └── src
@@ -362,6 +362,7 @@ my-application
                 └── example
                     └── myapplication
                         └── App.java
+```
 
 Customize the generated project structure and files as necessary.
 
