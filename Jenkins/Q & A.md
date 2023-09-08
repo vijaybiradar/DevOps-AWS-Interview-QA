@@ -352,7 +352,8 @@ Generate a Maven archetype for your project (if needed):
 mvn archetype:generate -DgroupId=com.example -DartifactId=your-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
 This will create a new project directory with the following structure:
-```
+
+````````````````````````
 my-application
 ├── pom.xml
 └── src
@@ -362,7 +363,7 @@ my-application
                 └── example
                     └── myapplication
                         └── App.java
-```
+`````````````````````````````
 
 Customize the generated project structure and files as necessary.
 
@@ -432,7 +433,7 @@ mvn clean install
 Capture build outputs (JAR file, GAV, test reports, etc.):
 
 # You can find the JAR file and other build outputs in the target directory
-Step 6: Create a Docker Image of the Application:
+
 
 After the build process completes successfully, you'll find your application's JAR file in the target directory within your project folder.
 
@@ -445,6 +446,8 @@ You can run your Java application by executing the JAR file. For example:
 ```
 java -jar my-application/target/my-application-1.0-SNAPSHOT.jar
 ```
+
+**Step 6: Create a Docker Image of the Application:**
 
 Create a Dockerfile for the application to package it into an image. For example, create a Dockerfile with the following content:
 Dockerfile
