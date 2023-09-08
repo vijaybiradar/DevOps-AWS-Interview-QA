@@ -418,7 +418,36 @@ Run SonarQube analysis in your CI/CD pipeline:
 ```
 mvn clean install sonar:sonar -Dsonar.projectKey=my-app -Dsonar.host.url=http://sonarqube-server:9000 -Dsonar.login=your-sonar-token
 ```
+Step 5: Artifact Repository with JFrog Artifactory
 
+Set up JFrog Artifactory as your artifact repository manager.
+
+Configure your Maven project to publish artifacts to Artifactory by updating your settings.xml file and pom.xml file. Here's an example of a settings.xml configuration:
+
+```
+<settings>
+  <servers>
+    <server>
+      <id>artifactory-server</id>
+      <username>your-username</username>
+      <password>your-password</password>
+    </server>
+  </servers>
+</settings>
+```
+Update your pom.xml to specify the deployment repository:
+```
+<distributionManagement>
+  <repository>
+    <id>artifactory-server</id>
+    <url>https://artifactory.your-domain.com/artifactory/your-repo</url>
+  </repository>
+</distributionManagement>
+```
+Deploy your Maven artifacts to Artifactory:
+```
+mvn deploy
+```
 
 
 **: Maven Build and Build Outputs:**
