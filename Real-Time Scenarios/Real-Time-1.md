@@ -2,10 +2,11 @@
 
 **Prerequisites:**
 
-An Amazon EKS cluster.
-Helm 3 installed on your local machine.
-A Route 53 hosted zone configured for your domain.
-Step-by-Step Guide:
+1.An Amazon EKS cluster.
+2.Helm 3 installed on your local machine.
+3.A Route 53 hosted zone configured for your domain.
+
+**Step-by-Step Guide:**
 
 **Step 1: Create a Security Group for Prometheus Grafana and Prometheus Node Exporter :**
 
