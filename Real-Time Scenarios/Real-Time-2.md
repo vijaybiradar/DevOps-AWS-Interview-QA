@@ -188,7 +188,8 @@ Configure the Security Group of target instances (with Node Exporter) to allow i
 
 Configure the Grafana instance's Security Group to allow incoming traffic on port 3000.
 
-![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/63e0f6c9-18e6-498f-87ec-9f7538d85943)
+![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/4e49ba14-8a7c-4e62-a91d-b5bca921fccf)
+
 
 
 **Step 7: Amazon Route 53 Configuration**
