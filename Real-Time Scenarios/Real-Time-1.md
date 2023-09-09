@@ -1,10 +1,9 @@
 ## step-by-step guide on how to set up Prometheus, Grafana, NGINX Ingress Controller, and Route 53 on Amazon EKS
 
 **Prerequisites:**
-
-1.An Amazon EKS cluster.
-2.Helm 3 installed on your local machine.
-3.A Route 53 hosted zone configured for your domain.
+- An Amazon EKS cluster.
+- Helm 3 installed on your local machine.
+- A Route 53 hosted zone configured for your domain.
 
 **Step-by-Step Guide:**
 
