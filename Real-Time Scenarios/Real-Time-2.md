@@ -25,27 +25,29 @@ sudo yum update -y
 ```
 2.3. Download and Install Prometheus:
 
-```
 # Download the latest Prometheus release
+
 ```
 wget https://github.com/prometheus/prometheus/releases/download/v2.30.0/prometheus-2.30.0.linux-amd64.tar.gz
 ```
-```
+
 # Extract Prometheus binaries
+```
 tar -xvf prometheus-2.30.0.linux-amd64.tar.gz
 ```
-```
+
 # Rename the extracted folder
+```
 mv prometheus-2.30.0.linux-amd64 prometheus-files
 ```
 2.4. Create Prometheus User and Directories:
 
-```
 # Create Prometheus user
+```
 sudo useradd --no-create-home --shell /bin/false prometheus
 ```
-```
 # Create required directories and set ownership
+```
 sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
 sudo chown prometheus:prometheus /etc/prometheus
@@ -54,8 +56,8 @@ sudo chown prometheus:prometheus /var/lib/prometheus
 
 2.5. Copy Prometheus Binaries:
 
-```
 # Copy Prometheus and Promtool binaries to /usr/local/bin
+```
 sudo cp prometheus-files/prometheus /usr/local/bin/
 sudo cp prometheus-files/promtool /usr/local/bin/
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
@@ -63,8 +65,8 @@ sudo chown prometheus:prometheus /usr/local/bin/promtool
 ```
 2.6. Move Consoles and Console Libraries:
 
-```
 # Move consoles and console_libraries directories
+```
 sudo cp -r prometheus-files/consoles /etc/prometheus
 sudo cp -r prometheus-files/console_libraries /etc/prometheus
 sudo chown -R prometheus:prometheus /etc/prometheus/consoles
@@ -72,8 +74,8 @@ sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 ```
 2.7. Set Up Prometheus Configuration:
 
-```
 # Create and edit the Prometheus configuration file
+```
 sudo vi /etc/prometheus/prometheus.yml
 ```
 Edit the configuration file to define your scraping targets, scrape intervals, etc. Example configuration:
@@ -94,8 +96,9 @@ scrape_configs:
 ```
 2.8. Create a Prometheus systemd Service:
 
-```
+
 # Create a Prometheus service file
+```
 sudo vi /etc/systemd/system/prometheus.service
 ```
 Add the following content:
@@ -167,8 +170,8 @@ sudo yum update -y
 ```
 5.3. Download and Install Grafana:
 
-```
 # Download and install Grafana
+```
 sudo yum install -y https://dl.grafana.com/oss/release/grafana-8.1.5-1.x86_64.rpm
 ```
 5.4. Start the Grafana Service:
@@ -176,6 +179,7 @@ sudo yum install -y https://dl.grafana.com/oss/release/grafana-8.1.5-1.x86_64.rp
 ```
 sudo systemctl start grafana-server
 ```
+
 **Step 6: Configure Security Groups**
 
 6.1. Prometheus Server Security Group:
@@ -188,8 +192,9 @@ Configure the Security Group of target instances (with Node Exporter) to allow i
 
 Configure the Grafana instance's Security Group to allow incoming traffic on port 3000.
 
-![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/4e49ba14-8a7c-4e62-a91d-b5bca921fccf)
+6.4. Click "Save."
 
+![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/afef79d5-69d9-49ce-b719-92deeec86072)
 
 
 **Step 7: Amazon Route 53 Configuration**
