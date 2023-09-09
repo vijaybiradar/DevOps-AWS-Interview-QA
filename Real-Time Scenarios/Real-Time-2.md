@@ -176,7 +176,7 @@ sudo yum install -y https://dl.grafana.com/oss/release/grafana-8.1.5-1.x86_64.rp
 ```
 sudo systemctl start grafana-server
 ```
-Step 6: Configure Security Groups
+**Step 6: Configure Security Groups**
 
 6.1. Prometheus Server Security Group:
 
@@ -188,9 +188,10 @@ Configure the Security Group of target instances (with Node Exporter) to allow i
 
 Configure the Grafana instance's Security Group to allow incoming traffic on port 3000.
 
-![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/59872b80-bedd-4133-bed9-384e21f8aeae)
+![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/63e0f6c9-18e6-498f-87ec-9f7538d85943)
 
-Step 7: Amazon Route 53 Configuration
+
+**Step 7: Amazon Route 53 Configuration**
 
 7.1. Go to the Amazon Route 53 Console:
 
@@ -203,7 +204,8 @@ Create a hosted zone for your domain (e.g., example.com).
 Create A records in your hosted zone for Grafana and Prometheus instances:
 Grafana: Create an A record (e.g., grafana.example.com) pointing to the Grafana instance's public IP.
 Prometheus: Create an A record (e.g., prometheus.example.com) pointing to the Prometheus instance's public IP.
-Step 8: Access Prometheus and Grafana UIs
+
+**Step 8: Access Prometheus and Grafana UIs**
 
 8.1. Access Prometheus UI:
 
