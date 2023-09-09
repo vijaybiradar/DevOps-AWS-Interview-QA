@@ -7,7 +7,7 @@ Helm 3 installed on your local machine.
 A Route 53 hosted zone configured for your domain.
 Step-by-Step Guide:
 
-**Step 1: Create a Security Group for Prometheus and Grafana:**
+**Step 1: Create a Security Group for Prometheus Grafana and Prometheus Node Exporter :**
 
 1.1. Navigate to the Amazon EC2 console.
 
@@ -24,9 +24,12 @@ Description: Provide a meaningful description for reference.
 1.6. Configure the rule as follows:
 
 Type: Select "Custom TCP."
-Port Range: Enter the port numbers for Prometheus (9090) and Grafana (3000).
+Port Range: Enter the port numbers for Prometheus (9090),Grafana (3000) and Prometheus Node Exporter (9100)
 Source: Choose "Anywhere" to allow traffic from any source.
 1.7. Click "Save."
+
+![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/afef79d5-69d9-49ce-b719-92deeec86072)
+
 
 **Step 2: Deploy Prometheus and Grafana Using Helm Charts:**
 
