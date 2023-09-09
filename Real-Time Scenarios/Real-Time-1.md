@@ -65,7 +65,9 @@ helm repo update
 
 helm install nginx-ingress ingress-nginx/ingress-nginx -n <namespace_of_your_choice>
 
+
 **Step 4: Configure Ingress Resources:**
+
 
 4.1. Retrieve the NGINX Ingress Controller load balancer IP address:
 
