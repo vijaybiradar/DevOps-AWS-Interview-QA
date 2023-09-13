@@ -273,22 +273,22 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 - Jenkins monitors SonarQube for analysis status (success or failure).
 - If code issues are identified, a notification is sent, but the pipeline continues.
 
-**4. Testing:**
+**4. Containerization:**
+- Docker is used to create a container image of the application based on a Dockerfile.
+
+**5. Docker Image Security Scanning:**
+- Docker images undergo security scanning using tools like Twistlock to identify vulnerabilities.
+
+**6. Docker Image Publishing:**
+- The Docker image is pushed to a Docker registry, which can be private or public.
+
+**7. Testing:**
 - Various tests are executed, including System Integration Tests (SIT), User Acceptance Tests (UAT), and Performance Tests (Perf).
 - Tests are executed using different Helm values.yaml configuration files.
 - If all tests pass, the pipeline proceeds to the next stage.
 
-**5. Artifact Management:**
+**8. Artifact Management:**
 - Jenkins interacts with an Artifactory repository to store binary files, including packaged artifacts and dependencies.
-
-**6. Containerization:**
-- Docker is used to create a container image of the application based on a Dockerfile.
-
-**7. Docker Image Security Scanning:**
-- Docker images undergo security scanning using tools like Twistlock to identify vulnerabilities.
-
-**8. Docker Image Publishing:**
-- The Docker image is pushed to a Docker registry, which can be private or public.
 
 **9. Infrastructure as Code (IaC):**
 - Infrastructure provisioning is managed as code using tools like Terraform or AWS CloudFormation.
