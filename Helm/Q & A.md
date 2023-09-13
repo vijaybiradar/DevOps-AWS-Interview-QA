@@ -126,10 +126,13 @@ helm install --set name="{{ release_name | default('redis') }}" ./redis
 ```
 In this command:
 
-```
-helm install deploys a Helm chart.
---set is used to assign a value within the Helm chart. In this case, it assigns the name value to the release_name variable.
-./redis represents the path to the Helm chart.
+
+ `helm install` deploys a Helm chart.
+
+ `--set` is used to assign a value within the Helm chart. In this case, it assigns the name value to the release_name variable.
+
+ `./redis` represents the path to the Helm chart.
+
 This way, the release_name variable dictates the release name, and "redis" is employed as a default value when the variable is not specified.
-```
+
 </b></details>
