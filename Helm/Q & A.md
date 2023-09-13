@@ -114,3 +114,22 @@ Or directly on the command line: `helm install --set some_key=some_value`
 
 `helm upgrade RELEASE_NAME CHART_NAME`
 </b></details>
+
+
+<details>
+<summary> How can you adapt the following Helm install command to utilize a variable for the release name instead of the fixed value "redis," with "redis" serving as the default if the variable is undefined?</summary><br><b>
+
+You can modify the Helm install command as follows to use a variable for the release name and fall back to "redis" as the default if the variable is not defined:
+
+```
+helm install --set name="{{ release_name | default('redis') }}" ./redis
+```
+In this command:
+
+```
+helm install deploys a Helm chart.
+--set is used to assign a value within the Helm chart. In this case, it assigns the name value to the release_name variable.
+./redis represents the path to the Helm chart.
+This way, the release_name variable dictates the release name, and "redis" is employed as a default value when the variable is not specified.
+```
+</b></details>
