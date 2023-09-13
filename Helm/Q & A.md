@@ -135,4 +135,5 @@ In this command:
 
 This way, the release_name variable dictates the release name, and "redis" is employed as a default value when the variable is not specified.
 
+
 </b></details>
