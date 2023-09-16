@@ -29,6 +29,9 @@ Port Range: Enter the port numbers for Prometheus (9090), Prometheus Node Export
 Source: Choose "Anywhere" to allow traffic from any source.
 1.7. Click "Create."
 
+![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/47f3ad0e-0ea8-4ab2-938f-12ad43019d47)
+
+
 Step 2: Deploy Prometheus:
 
 2.1. Apply the Prometheus configuration (prometheus-config.yaml) using kubectl apply -f prometheus-config.yaml:
