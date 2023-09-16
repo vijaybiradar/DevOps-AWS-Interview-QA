@@ -1,4 +1,6 @@
-Q: Can you explain the CICD process in your current project ? or Can you talk about any CICD process that you have implemented ?
+<details>
+<summary>
+ Can you explain the CICD process in your current project ? or Can you talk about any CICD process that you have implemented ?</summary><br><b>
 
 A: In the current project we use the following tools orchestrated with Jenkins to achieve CICD.
    - Maven, Sonar, AppScan, ArgoCD, and Kubernetes
@@ -13,9 +15,12 @@ A: In the current project we use the following tools orchestrated with Jenkins t
     6. Continuous Deployment: ArgoCD is used to manage continuous deployment. ArgoCD watches the Git repository and automatically deploys new changes to the development environment as soon as they are committed.
     7. Promote to Production: When the code is ready for production, it is manually promoted using ArgoCD to the production environment.
     8. Monitoring: The application is monitored for performance and availability using Kubernetes tools and other monitoring tools.
-   
+</b></details>   
 
-Q: What are the different ways to trigger jenkins pipelines ?
+
+<details>
+<summary>
+Q: What are the different ways to trigger jenkins pipelines ?</summary><br><b>
 
 A: This can be done in multiple ways,
    To briefly explain about the different options,
@@ -29,7 +34,10 @@ A: This can be done in multiple ways,
      - Webhooks: A webhook can be created in GitHub to notify Jenkins when changes are pushed to the repository. 
                  Jenkins can then automatically build the updated code. This can be set up in the "Build Triggers" section of a job and in the GitHub repository settings.
    ```
-Q: How to backup Jenkins ?
+</b></details>
+<details>
+<summary>
+Q: How to backup Jenkins ?</summary><br><b>
 
 A: Backing up Jenkins is a very easy process, there are multiple default and configured files and folders in Jenkins that you might want to backup.
 ```  
@@ -45,7 +53,11 @@ A: Backing up Jenkins is a very easy process, there are multiple default and con
 ```
 One can schedule the backups to occur regularly, such as daily or weekly, to ensure that you always have a recent copy of your Jenkins environment available. You can use tools such as cron or Windows Task Scheduler to automate the backup process.
 
-Q: How do you store/secure/handle secrets in Jenkins ?
+</b></details>
+
+<details>
+<summary>
+Q: How do you store/secure/handle secrets in Jenkins ?</summary><br><b>
 
 A: Again, there are multiple ways to achieve this, 
    Let me give you a brief explanation of all the posible options.
@@ -58,12 +70,19 @@ A: Again, there are multiple ways to achieve this,
    
    - Third-party Secret Management Tools: Jenkins can also be integrated with third-party secret management tools such as AWS Secrets Manager, Google Cloud Key Management Service, and Azure Key Vault.
 ```
+</b></details>
+<details>
 
-Q: What is latest version of Jenkins or which version of Jenkins are you using ?
+<summary>
+Q: What is latest version of Jenkins or which version of Jenkins are you using ?</summary><br><b>
 
 A: This is a very simple question interviewers ask to understand if you are actually using Jenkins day-to-day, so always be prepared for this.
 
-Q: What is shared modules in Jenkins ?
+</b></details>
+
+<details>
+<summary>
+Q: What is shared modules in Jenkins ?</summary><br><b>
 
 A: Shared modules in Jenkins refer to a collection of reusable code and resources that can be shared across multiple Jenkins jobs. This allows for easier maintenance, reduced duplication, and improved consistency across multiple build processes.
    For example, shared modules can be used in cases like:
@@ -76,8 +95,11 @@ A: Shared modules in Jenkins refer to a collection of reusable code and resource
         
         - Global Variables: Shared global variables can be defined and used across multiple jobs, making it easier to manage common build parameters such as version numbers, artifact repositories, and environment variables.
 ```
+</b></details>
 
-Q: can you use Jenkins to build applications with multiple programming languages using different agents in different stages ?
+<details>
+<summary>
+Q: can you use Jenkins to build applications with multiple programming languages using different agents in different stages ?</summary><br><b>
 
 A: Yes, Jenkins can be used to build applications with multiple programming languages by using different build agents in different stages of the build process.
 
@@ -89,7 +111,12 @@ Jenkins also provides a wide range of plugins that can be used to support multip
 
 Overall, Jenkins is a flexible and powerful tool that can be used to build applications with multiple programming languages and support different stages of the build process.
 
-Q: How to setup auto-scaling group for Jenkins in AWS ?
+</b></details>
+
+<details>
+<summary>
+
+Q: How to setup auto-scaling group for Jenkins in AWS ?</summary><br><b>
 
 A: Here is a high-level overview of how to set up an autoscaling group for Jenkins in Amazon Web Services (AWS):
 ```
@@ -109,12 +136,20 @@ A: Here is a high-level overview of how to set up an autoscaling group for Jenki
 
  By using an autoscaling group for Jenkins, you can ensure that you have the appropriate number of instances available to handle the load on your build processes, and that new instances can be added or removed automatically as needed. This helps to ensure the reliability and scalability of your Jenkins environment.
 ```
+</b></details>
 
-Q: How to add a new worker node in Jenkins ?
+<details>
+<summary>
+
+Q: How to add a new worker node in Jenkins ?</summary><br><b>
 
 A: Log into the Jenkins master and navigate to Manage Jenkins > Manage Nodes > New Node. Enter a name for the new node and select Permanent Agent. Configure SSH and click on Launch.
 
-Q: How to add a new plugin in Jenkins ?
+</b></details>
+
+<details>
+<summary>
+Q: How to add a new plugin in Jenkins ?</summary><br><b>
 
 A: Using the CLI, 
    `java -jar jenkins-cli.jar install-plugin <PLUGIN_NAME>`
@@ -124,19 +159,28 @@ A: Using the CLI,
    1. Click on the "Manage Jenkins" link in the left-side menu.
    2. Click on the "Manage Plugins" link.
 
-Q: What is JNLP and why is it used in Jenkins ?
+</b></details>
+
+<details>
+<summary>
+
+Q: What is JNLP and why is it used in Jenkins ?</summary><br><b>
 
 A: In Jenkins, JNLP is used to allow agents (also known as "slave nodes") to be launched and managed remotely by the Jenkins master instance. This allows Jenkins to distribute build tasks to multiple agents, providing scalability and improving performance.
 
    When a Jenkins agent is launched using JNLP, it connects to the Jenkins master and receives build tasks, which it then executes. The results of the build are then sent back to the master and displayed in the Jenkins user interface.
 
+</b></details>
 Q: What are some of the common plugins that you use in Jenkins ?
 
 A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so that interview feels you use jenkins on a day-to-day basis.
 
+</b></details>
 
+<details>
+<summary>
 
-# Q: Explain CI/CD flow
+# Q: Explain CI/CD flow</summary><br><b>
 
 ![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/66e58971-db48-4435-a65d-8e0f26c4b3b8)
 ![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/3f3f15a4-2641-4abd-8301-e33889582fc1)
@@ -249,11 +293,13 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 **22. Notification and Alerting:**
 - Notifications and alerting mechanisms (e.g., Slack or email notifications) are implemented for pipeline status updates and critical issues to keep the team informed.
 
+</b></details>
 
 
-**One more version**
+<details>
+<summary>
 
-# Q: Explain CI/CD flow
+# Q: Explain CI/CD flow</summary><br><b>
 
 ![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/66e58971-db48-4435-a65d-8e0f26c4b3b8)
 ![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/3f3f15a4-2641-4abd-8301-e33889582fc1)
@@ -319,9 +365,13 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 **15. Notification and Alerting:**
 - Notification and alerting mechanisms are set up to inform relevant teams or individuals about pipeline status and critical incidents. Grafana can be configured to send alerts based on predefined thresholds.
 
+</b></details>
+
+<details>
+<summary>
 
 # Q: complete CI/CD pipeline for java application without using jenkins ? or
-**What is the workflow for deploying an JAVA application to multiple environments (SIT, UAT, Perf, and Prod) without utilizing Jenkins, using a manual process? Can you describe how popular DevOps tools such as Git, Maven, Docker, Kubernetes, Artifactory, Helm, Prometheus/Grafana/Loki, Blue-Green Deployment works**
+**What is the workflow for deploying an JAVA application to multiple environments (SIT, UAT, Perf, and Prod) without utilizing Jenkins, using a manual process? Can you describe how popular DevOps tools such as Git, Maven, Docker, Kubernetes, Artifactory, Helm, Prometheus/Grafana/Loki, Blue-Green Deployment works**</summary><br><b>
 
 **Step 1: Version Control with Git:**
 Set up a Git repository to manage your application code. Initialize the repository:
@@ -618,8 +668,12 @@ Gradually switch traffic to the green environment if it passes testing.
 Monitor both blue and green environments to ensure the new version is stable.
 
 
+</b></details>
+
+<details>
+<summary>
 # Q: complete CI/CD pipeline for a Node.js application without using jenkins ? or
-**What is the workflow for deploying an JAVA application to multiple environments (SIT, UAT, Perf, and Prod) without utilizing Jenkins, using a manual process? Can you describe how popular DevOps tools such as Git, Maven, Docker, Kubernetes, Artifactory, Helm, Prometheus/Grafana/Loki, Blue-Green Deployment works**
+**What is the workflow for deploying an JAVA application to multiple environments (SIT, UAT, Perf, and Prod) without utilizing Jenkins, using a manual process? Can you describe how popular DevOps tools such as Git, Maven, Docker, Kubernetes, Artifactory, Helm, Prometheus/Grafana/Loki, Blue-Green Deployment works**</summary><br><b>
 
 ![image](https://github.com/vijaybiradar/DevOps-AWS-Interview-QA/assets/38376802/b186502f-e788-4b6f-b4bf-080839f3f153)
 
@@ -819,3 +873,4 @@ Monitor both blue and green environments to ensure the new version is stable.
 
 This comprehensive guide covers setting up a CI/CD pipeline for a Node
 
+</b></details>
