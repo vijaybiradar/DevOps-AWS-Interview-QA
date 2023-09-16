@@ -313,6 +313,8 @@ A: Be prepared for answer, you need to have atleast 3-4 on top of your head, so 
 **2. Build and Notification:**
 - Jenkins uses the Maven plugin to build the code, creating deployable artifacts.
 - After the build, an email notification is sent to the concerned team with the build status (success or failure).
+- CI/CD server builds the code and executes the unit tests in pom.xml.
+- If the unit tests pass, the code is deployed to the lower (SIT,UAT,PERF) environment.
 
 **3. Code Quality Analysis:**
 - The SonarQube plugin is integrated into the pipeline for code quality analysis.
