@@ -1,4 +1,4 @@
-## step-by-step guide on how to set up Prometheus, Grafana, NGINX Ingress Controller, and Route 53 on Amazon EKS
+## step-by-step guide on how to set up Prometheus, Grafana, NGINX Ingress Controller, and Route 53 on Amazon EKS using Helm
 
 **Prerequisites:**
 - An Amazon EKS cluster.
